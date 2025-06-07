@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://dm1m6n48g1i3k"]
+
+[ext_resource type="FontFile" uid="uid://by4cvtw4gk436" path="res://content/base_game/assets/fonts/jupiterc.ttf" id="1_0wt2q"]
+[ext_resource type="Script" uid="uid://doxdir7crt4gm" path="res://scenes/core/loading_screen.gd" id="2_iwg68"]
+[ext_resource type="LabelSettings" uid="uid://cc4mckcrdsjkd" path="res://content/base_game/resources/label_settings/title.tres" id="2_swbpy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_swbpy"]
+bg_color = Color(0.180619, 0.199622, 0.228532, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwg68"]
+bg_color = Color(0.317108, 0.464706, 0.307155, 1)
+
+[sub_resource type="Theme" id="Theme_swbpy"]
+default_font = ExtResource("1_0wt2q")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_swbpy")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_iwg68")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_epbi8"]
+size = Vector2(640, 360)
+
+[node name="LoadingScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_swbpy")
+script = ExtResource("2_iwg68")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_epbi8")
+stretch_mode = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+max_value = 1.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 18.0
+grow_horizontal = 2
+text = "Sylentlands"
+label_settings = ExtResource("2_swbpy")
+horizontal_alignment = 1

@@ -20,7 +20,8 @@ boot_splash/show_image=false
 
 [autoload]
 
-GlobalEntryPoint="*res://scenes/autoload/global_entry_point.tscn"
+GlobalEntryPoint="*res://scenes/core/autoload/global_entry_point.tscn"
+Log="*res://addons/logger/logger.gd"
 
 [display]
 
@@ -29,6 +30,15 @@ window/size/viewport_height=360
 window/size/mode=3
 window/size/window_width_override=1280
 window/size/window_height_override=720
+window/stretch/mode="viewport"
+
+[dotnet]
+
+project/assembly_name="Sylentlands"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/logger/plugin.cfg")
 
 [physics]
 

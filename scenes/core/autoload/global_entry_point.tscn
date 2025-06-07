@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c12p0o0tydvtw"]
+
+[ext_resource type="Script" uid="uid://cjvhv0kse5cbh" path="res://scenes/core/autoload/global_entrypoint.gd" id="1_bpva7"]
+
+[node name="GlobalEntryPoint" type="Node"]
+script = ExtResource("1_bpva7")
+loading_screen_path = "uid://dm1m6n48g1i3k"

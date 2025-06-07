@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://rqjeahfjex5d"]
+
+[ext_resource type="Script" uid="uid://dj3irq2vv7o75" path="res://scenes/core/spawnable_pool.gd" id="1_ohtjv"]
+
+[node name="SpawnablePool" type="Node"]
+script = ExtResource("1_ohtjv")
+spawnable_paths = Array[String]([""])
+metadata/_custom_type_script = "uid://dso85dsqcc22r"
